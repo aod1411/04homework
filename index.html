@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css"/>
+    <title>Quiz Homework</title>
+</head>
+<body>
+    <div class="timer">Time: <span id="time">0</span></div>
+    <div class= "hide" id="high-scores">High Scores:</div>
+    <div class="wrapper">
+        <div id="start-screen" class="start">
+            <h1>Quiz Time!</h1>
+            <p>Click the start button to start the quiz!</p>
+            <button class="btn" id="start">Start</button>
+        </div>
+
+        <div id="questions" class="hide">
+            <h2 id="question-title" class="card-title text-center"></h2>
+            <div id="choices" class="choices"></div>
+        </div>
+
+        <div id="end-screen"  class="hide">
+            <h2>You finished!</h2>
+            <p>Your final score is <span id="final-score"></span></p>
+            <p>Enter initials: <input type="text" id="initials"/></p>
+            <button class="btn" id="submit">Submit</button>
+        </div>
+    </div>
+
+    <script src="./assets/js/questions.js"></script>
+    <script src="./assets/js/logic.js"></script>
+</body>
+</html>
