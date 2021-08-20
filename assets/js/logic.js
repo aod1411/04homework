@@ -53,9 +53,10 @@ function showQuestions() {
 }
 
 var incorrect = 0;
+var correct = 0;
 function choiceClick() {
 
-    if (this.value !== questions[currentQuestionIndex].answer) {
+    if (this.value != questions[currentQuestionIndex].answer) {
         time -= 10;
         incorrect++;
         if (time < 0) {
@@ -64,7 +65,9 @@ function choiceClick() {
 
         timer.textContent = time;
     }
-
+    else{
+        correct++;
+    }
     currentQuestionIndex++;
 
     if (currentQuestionIndex === questions.length) {
@@ -83,9 +86,9 @@ function endQuiz() {
 
     var finalScore = document.getElementById("final-score");
 
-    var userScore = incorrect /= questions.length;
+    var userScore = correct /= questions.length;
 
-    var userScoreFinal = userScore.toFixed(2).split("0.");
+    var userScoreFinal = userScore * 100;
 
     finalScore.textContent = userScoreFinal;
 
